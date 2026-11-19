@@ -14,7 +14,7 @@ import { DecimalPipe, JsonPipe } from '@angular/common';
  div{
  width:100vw;
  height: calc(100vh - 64px) ;
- background-color: red;
+ 
  }
   
  #controls{
@@ -52,6 +52,7 @@ zoomEffect = effect(()=>{
 
   async ngAfterViewInit() {
      if(!this.divElement()?.nativeElement)return;
+     await new Promise((resolve)=>setTimeout(resolve,80))
      const element = this.divElement()!.nativeElement;
      const{ lng,lat} = this.coordinates();
 

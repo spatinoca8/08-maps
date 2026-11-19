@@ -22,6 +22,6 @@ export const routes: Routes = [
     },
      {
         path:'**',
-        redirectTo:'fullscreeen'
+         redirectTo:'fullscreen'
     },
 ];
